@@ -1,0 +1,36 @@
+@use "../../../assets/scss/utils/fonts" as f;
+@forward "../../../assets/scss/utils/container";
+
+.header--wrapper {
+  @extend .py-50;
+}
+
+.reservation--header {
+  font-family: f.$tektur;
+  font-size: 70px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.reservation--btns {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 40px;
+  border-radius: 10px;
+}
+.btn-primary {
+  background-color: green;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: rgb(0, 207, 0);
+  }
+}

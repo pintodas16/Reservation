@@ -1,0 +1,105 @@
+<form
+  action=""
+  [formGroup]="reservationForm"
+  (ngSubmit)="handleSubmit()"
+  class="form py-30"
+>
+  <div class="form--container">
+    <div class="form--input">
+      <label for="">Guest Name : </label>
+      <input
+        type="text"
+        placeholder="Enter your Name"
+        formControlName="guestName"
+      />
+      <div
+        class="error-message"
+        *ngIf="
+          reservationForm.get('guestName')?.invalid &&
+          reservationForm.get('guestName')?.touched
+        "
+      >
+        Guest Name is required
+      </div>
+    </div>
+
+    <div class="form--input">
+      <label for="">Guest Email : </label>
+      <input
+        type="email"
+        placeholder="Enter your Name"
+        formControlName="guestEmail"
+      />
+      <div
+        class="error-message"
+        *ngIf="
+          reservationForm.get('guestEmail')?.invalid &&
+          reservationForm.get('guestEmail')?.touched
+        "
+      >
+        Guest Email is required
+      </div>
+    </div>
+
+    <div class="form--input-group">
+      <div class="form--input col-6">
+        <label for="">check In date : </label>
+        <input
+          type="date"
+          placeholder="Enter your Name"
+          formControlName="checkInDate"
+        />
+
+        <div
+          class="error-message"
+          *ngIf="
+            reservationForm.get('checkInDate')?.invalid &&
+            reservationForm.get('checkInDate')?.touched
+          "
+        >
+          check in date is required
+        </div>
+      </div>
+
+      <div class="form--input col-6">
+        <label for="">check out date : </label>
+        <input
+          type="date"
+          placeholder="Enter your Name"
+          formControlName="checkOutDate"
+        />
+        <div
+          class="error-message"
+          *ngIf="
+            reservationForm.get('checkOutDate')?.invalid &&
+            reservationForm.get('checkOutDate')?.touched
+          "
+        >
+          check out date is required
+        </div>
+      </div>
+    </div>
+
+    <div class="form--input">
+      <label for="">Room Number : </label>
+      <input
+        type="number"
+        placeholder="Enter your Name"
+        formControlName="roomNumber"
+      />
+      <div
+        class="error-message"
+        *ngIf="
+          reservationForm.get('roomNumber')?.invalid &&
+          reservationForm.get('roomNumber')?.touched
+        "
+      >
+        Room Number is required
+      </div>
+    </div>
+
+    <div class="form--submit">
+      <button type="submit">Submit</button>
+    </div>
+  </div>
+</form>

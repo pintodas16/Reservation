@@ -1,0 +1,55 @@
+/* Reset Default Styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default link styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset heading and paragraph spacing */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+/* Reset input and button styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  outline: none;
+}
+
+/* Remove default button background */
+button {
+  background: none;
+  cursor: pointer;
+}
+
+/* Ensure full height */
+html,
+body {
+  height: 100%;
+  font-size: 16px;
+  font-family: sans-serif;
+}
