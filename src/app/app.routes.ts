@@ -11,4 +11,8 @@ export const routes: Routes = [
     path: 'all-bookings',
     component: ReservationListComponent,
   },
+  {
+    path: 'bookings/:id',
+    component: ReservationFormComponent,
+  },
 ];
