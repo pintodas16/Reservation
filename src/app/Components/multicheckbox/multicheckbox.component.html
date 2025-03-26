@@ -1,0 +1,33 @@
+<!-- <form [formGroup]="checkboxForm">
+  <div formArrayName="checkbox">
+    <div *ngFor="let checkbox of checkboxes.controls; let i = index">
+      <label>
+        <input type="checkbox" [formControlName]="i" />
+        {{ options[i].title }} ({{ options[i].cost }})
+   
+      </label>
+    </div>
+  </div>
+</form> -->
+
+<!-- <form [formGroup]="checkboxForm">
+  <div formArrayName="checkboxes">
+    <div *ngFor="let checkbox of checkboxes.controls; let i = index">
+      <label>
+        <input type="checkbox" [formControlName]="i" />
+        {{ options[i].title }}
+      </label>
+    </div>
+  </div>
+</form> -->
+
+<form [formGroup]="checkboxForm">
+  <div formArrayName="checkboxes">
+    <div *ngFor="let checkbox of checkboxes.controls; index as i">
+      <label>
+        <input type="checkbox" [formControlName]="i" />
+        <span>{{ options[i].title }}</span>
+      </label>
+    </div>
+  </div>
+</form>

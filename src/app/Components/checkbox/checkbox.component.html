@@ -1,0 +1,50 @@
+<div class="checkbox-container">
+  <!-- <div>
+    <h5>checkbx</h5>
+    <form [formGroup]="checkboxOne">
+      <label for="check-one">
+        <input
+          type="checkbox"
+          id="check-one"
+          (change)="onChange($event)"
+          formGroupName="checkOne"
+          value="single checkbox"
+        />
+        <span>single checkbox</span>
+      </label>
+    </form>
+  </div> -->
+
+  <!-- <div>
+    <h5>checkbox group</h5>
+    <form [formGroup]="checkboxGroup">
+      <div formArrayName="checkboxes">
+        <div *ngFor="let option of options; index as i">
+          <label for="{{`group-${i}`}}">
+            <input
+              type="checkbox"
+              id="{{`group-${i}`}}"
+              [formControlName]="i"
+              [value]="option.title"
+            />
+            <span>{{ option.title }}</span>
+          </label>
+        </div>
+      </div>
+    </form>
+  </div>
+  <button (click)="getSelectedValues()">Submit</button> -->
+
+  <app-multicheckbox></app-multicheckbox>
+
+  <!-- <form [formGroup]="checkboxForm">
+    <label>
+      <input type="checkbox" formControlName="agreeTerms" />
+      I agree to the terms and conditions
+    </label>
+
+    <div *ngIf="agree?.invalid && agree?.touched" class="error">
+      You must accept the terms before proceeding.
+    </div>
+  </form> -->
+</div>
