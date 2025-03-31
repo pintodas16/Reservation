@@ -12,7 +12,26 @@
         <button [routerLink]="['/checkbox']" class="btn btn-primary">
           checkbox
         </button>
+        <button
+          [routerLink]="['/products', 'burger', 'kdfj']"
+          class="btn btn-primary"
+          (click)="handleOpen()"
+        >
+          modal
+        </button>
       </div>
     </div>
   </div>
 </header>
+
+<nz-modal
+  [(nzVisible)]="isVisible"
+  (nzOnCancel)="handleCancel()"
+  nzClosable="false"
+  [nzFooter]="null"
+  nzNoAnimation="true"
+>
+  <ng-container *nzModalContent>
+    <app-modal (closeModal)="handleCancel()"></app-modal>
+  </ng-container>
+</nz-modal>

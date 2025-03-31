@@ -18,7 +18,17 @@ export class ReservationListComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
   ngOnInit(): void {
-    this.reservations = this.reservationService.getReservations();
+    this.reservationService.getReservations().subscribe({
+      next: (reservations: Reservation[]) => {
+        this.reservations = reservations;
+      },
+      error: (error) => {
+        console.error('Error fetching reservations:', error);
+      },
+      complete: () => {
+        console.log('Reservations fetch complete');
+      },
+    });
   }
 
   deleteReservation(id: string) {

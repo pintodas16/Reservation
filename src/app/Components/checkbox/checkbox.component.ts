@@ -9,10 +9,16 @@ import {
   FormArray,
 } from '@angular/forms';
 import { MulticheckboxComponent } from '../multicheckbox/multicheckbox.component';
+import { OurStoryComponent } from '../our-story/our-story.component';
 @Component({
   selector: 'app-checkbox',
 
-  imports: [CommonModule, ReactiveFormsModule, MulticheckboxComponent],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    MulticheckboxComponent,
+    OurStoryComponent,
+  ],
   templateUrl: './checkbox.component.html',
   styleUrl: './checkbox.component.scss',
 })

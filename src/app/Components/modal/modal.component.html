@@ -1,0 +1,56 @@
+<div class="modal">
+  <div class="modal__content" (scroll)="onScroll($event)">
+    <div class="modal__content--img">
+      <img src="/assets/img/burger.jpg" alt="" />
+    </div>
+    <div class="modal__content--text">
+      <h6>Burger cheess</h6>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+        modi earum ab laudantium excepturi dolores nisi saepe, quam aperiam
+        temporibus dolorem pariatur magnam enim perspiciatis. Reiciendis porro
+        ipsa provident pariatur non mollitia velit tempore rem voluptate,
+        eveniet ipsum dignissimos distinctio?
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+        modi earum ab laudantium excepturi dolores nisi saepe, quam aperiam
+        temporibus dolorem pariatur magnam enim perspiciatis. Reiciendis porro
+        ipsa provident pariatur non mollitia velit tempore rem voluptate,
+        eveniet ipsum dignissimos distinctio?
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+        modi earum ab laudantium excepturi dolores nisi saepe, quam aperiam
+        temporibus dolorem pariatur magnam enim perspiciatis. Reiciendis porro
+        ipsa provident pariatur non mollitia velit tempore rem voluptate,
+        eveniet ipsum dignissimos distinctio?
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+        modi earum ab laudantium excepturi dolores nisi saepe, quam aperiam
+        temporibus dolorem pariatur magnam enim perspiciatis. Reiciendis porro
+        ipsa provident pariatur non mollitia velit tempore rem voluptate,
+        eveniet ipsum dignissimos distinctio?
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+        modi earum ab laudantium excepturi dolores nisi saepe, quam aperiam
+        temporibus dolorem pariatur magnam enim perspiciatis. Reiciendis porro
+        ipsa provident pariatur non mollitia velit tempore rem voluptate,
+        eveniet ipsum dignissimos distinctio?
+      </p>
+    </div>
+  </div>
+
+  <div class="modal__header" [ngClass]="{ scrolled: isScrolled }">
+    <h5>Hello burger</h5>
+    <button (click)="handleCloseModal()" class="modal__header--cancel">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"
+        ></path>
+      </svg>
+    </button>
+  </div>
+</div>

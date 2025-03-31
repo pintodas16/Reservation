@@ -2,14 +2,19 @@ import { Injectable, Inject } from '@angular/core';
 import { Reservation } from './../../../../hotel-app/src/app/models/reservation';
 import { NzMessageService } from 'ng-zorro-antd/message';
 import { NzNotificationService } from 'ng-zorro-antd/notification';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
 @Injectable({
   providedIn: 'root',
 })
 export class ReservationService {
+  private apiUrl = 'http://localhost:3000';
   reservations: Reservation[] = [];
   constructor(
     private message: NzMessageService,
-    private notification: NzNotificationService
+    private notification: NzNotificationService,
+    private http: HttpClient
   ) {
     this.loadReservation();
   }
@@ -38,8 +43,10 @@ export class ReservationService {
     localStorage.setItem('reservations', JSON.stringify(this.reservations));
   }
 
-  getReservations(): Reservation[] {
-    return this.reservations;
+  getReservations(): Observable<Reservation[]> {
+    // return this.reservations;
+
+    return this.http.get<Reservation[]>(this.apiUrl + '/reservations');
   }
 
   getReservation(id: string): Reservation | undefined {

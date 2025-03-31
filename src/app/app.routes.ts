@@ -20,4 +20,8 @@ export const routes: Routes = [
     path: 'checkbox',
     component: CheckboxComponent,
   },
+  {
+    path: 'products/:name/:id',
+    component: CheckboxComponent,
+  },
 ];
