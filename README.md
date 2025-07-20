@@ -52,7 +52,7 @@ For end-to-end (e2e) testing, run:
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs. [ CLI](https://bush-tile-302.notion.site/Add-an-Image-to-the-canvas-23661dc77df880508321efab8f44fb19)
 
 ## Additional Resources 
 [ CLI](https://bush-tile-302.notion.site/canvas-22f61dc77df880018524e1f253841397)
